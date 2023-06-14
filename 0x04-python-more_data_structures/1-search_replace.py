@@ -1,5 +1,12 @@
 #!/usr/bin/python3
 def search_replace(my_list, search, replace):
-    my_list = [89 if x == 2 else x for x in my_list]
+    new_list = []
 
-    return my_list
+    for i in my_list:
+        if i == search:
+            i = replace
+            new_list.append(i)
+        else:
+            new_list.append(i)
+
+    return new_list
