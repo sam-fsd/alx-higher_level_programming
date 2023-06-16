@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 def weight_average(my_list=[]):
     total_sum, total_weight = 0, 0
+    if len(my_list) == 0:
+        return 0
 
     for row in my_list:
         total_sum += row[0] * row[1]
