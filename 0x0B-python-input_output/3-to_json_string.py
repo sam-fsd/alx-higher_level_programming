@@ -1,13 +1,10 @@
 #!/usr/bin/python3
-""" 
-Module imports json and defines
-a function that returns JSON
-representation of a object
-"""
+"""defining to_json_string function"""
+
+
 import json
 
 
 def to_json_string(my_obj):
-    """Converts obj to JSON"""
+    """returns json representation of an object"""
     return json.dumps(my_obj)
-
