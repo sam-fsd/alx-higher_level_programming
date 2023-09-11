@@ -1,5 +1,5 @@
 #!/usr/bin/node
-//script that prints two arguments passed to it seperated by is
+// script that prints two arguments passed to it seperated by is
 
 const process = require('process');
 const argv = process.argv;
