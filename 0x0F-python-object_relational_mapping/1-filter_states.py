@@ -25,7 +25,7 @@ if __name__ == "__main__":
         for result in results:
             print(result)
     except MySQLdb.Error as e:
-        print("MySQLdb Error: %s".format(e))
+        print(f"MySQLdb Error: {e}")
 
     cursor.close()
     connection.close()
