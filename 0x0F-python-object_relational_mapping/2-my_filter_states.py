@@ -21,14 +21,15 @@ if __name__ == "__main__":
                                   passwd=password, port=port, db=db)
         cursor = db_conn.cursor()
         query = (
-            "SELECT * FROM states WHERE name = '{}' "
-            "ORDER BY id ASC".format(search_term)
+                "SELECT * FROM states WHERE name = '{:s}' "
+                "ORDER BY id ASC".format(search_term)
         )
         cursor.execute(query)
 
         rows = cursor.fetchall()
         for row in rows:
-            print(row)
+            if row[1] == search_term:
+                print(row)
     except MySQLdb.Error as e:
         print(f"Error occured {e}")
     finally:
